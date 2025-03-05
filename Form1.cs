@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Modul_03
@@ -73,14 +65,32 @@ namespace Modul_03
 
         private void btnEquls_Click(object sender, EventArgs e)
         {
-            y = int.Parse(OutputBox.Text);
-            int sum = x + y;
-            OutputBox.Text = sum.ToString();
+            try
+            {
+                y = int.Parse(OutputBox.Text);
+                int sum = x + y;
+                OutputBox.Text = sum.ToString();
+            } catch (Exception ex)
+            {
+            }
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            x = int.Parse(OutputBox.Text);
+            try
+            {
+                x = int.Parse(OutputBox.Text);
+                OutputBox.Text = "";
+            } catch (Exception ex)
+            {
+            }
+            
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            x = 0;
+            y = 0;
             OutputBox.Text = "";
         }
     }

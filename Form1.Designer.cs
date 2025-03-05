@@ -41,6 +41,7 @@
             this.btnEquls = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1
@@ -196,11 +197,24 @@
             this.btnPlus.UseVisualStyleBackColor = false;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
+            // clearBtn
+            // 
+            this.clearBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.clearBtn.Location = new System.Drawing.Point(210, 181);
+            this.clearBtn.MinimumSize = new System.Drawing.Size(60, 60);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(60, 60);
+            this.clearBtn.TabIndex = 24;
+            this.clearBtn.Text = "C";
+            this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // CalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 321);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btnEquls);
@@ -238,6 +252,7 @@
         private System.Windows.Forms.Button btnEquls;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnPlus;
+        private System.Windows.Forms.Button clearBtn;
     }
 }
 
