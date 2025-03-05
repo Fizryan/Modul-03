@@ -67,9 +67,9 @@ namespace Modul_03
         {
             try
             {
-                y = int.Parse(OutputBox.Text);
-                int sum = x + y;
-                OutputBox.Text = sum.ToString();
+                y = int.Parse(OutputBox.Text);                          // Ubah String ke Int
+                int sum = x + y;                                        // jumlahkan x dengan y
+                OutputBox.Text = sum.ToString();                        // ubah int ke String
             } catch (Exception ex)
             {
             }
@@ -79,19 +79,19 @@ namespace Modul_03
         {
             try
             {
-                x = int.Parse(OutputBox.Text);
-                OutputBox.Text = "";
+                x = int.Parse(OutputBox.Text);                          // Ubah String ke Int
+                OutputBox.Text = "";                                    // Bersihin OutputBox
             } catch (Exception ex)
             {
             }
             
         }
 
-        private void clearBtn_Click(object sender, EventArgs e)
+        private void clearBtn_Click(object sender, EventArgs e)         // Clear Output Calculator
         {
-            x = 0;
-            y = 0;
-            OutputBox.Text = "";
+            x = 0;                                                      // Bersihin nilai x
+            y = 0;                                                      // Bersihin nilai y
+            OutputBox.Text = "";                                        // Bersihin OutputBox
         }
     }
 }
